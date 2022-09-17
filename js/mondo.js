@@ -8,6 +8,15 @@ let right = document.querySelector(".Right");
 let image = document.querySelector("img");
 let body = document.querySelector("body");
 
+// reseting transition function
+
+function reset(){
+  image.classList.remove("run-animation");
+  void image.offsetWidth;
+  image.classList.add("run-animation");
+}
+
+
 //this function to change pics (1) from left and right
 function change1(){
   var i = 1;
@@ -16,6 +25,7 @@ function change1(){
     if(i===1) i=5;
     i--;
     image.src ="img/SC0"+i+".jpg";
+    reset();
   };
 
   right.onclick = function(){
@@ -23,6 +33,7 @@ function change1(){
     i++;
     if(i===5) i =1;
     image.src ="img/SC0"+i+".jpg";
+    reset();
 
   };
 };
@@ -37,6 +48,7 @@ function change2(){
     if(i===1) i=9;
     i--;
     image.src ="img/shuffle-0"+i+".jpg";
+    reset();
   };
 
   right.onclick = function(){
@@ -44,6 +56,7 @@ function change2(){
     i++;
     if(i===9) i =1;
     image.src ="img/shuffle-0"+i+".jpg";
+    reset();
 
   };
 };
@@ -57,6 +70,7 @@ function change3(){
     if(i===1) i=6;
     i--;
     image.src ="img/PH0"+i+".jpg";
+    reset();
   };
 
   right.onclick = function(){
@@ -64,10 +78,10 @@ function change3(){
     i++;
     if(i===6) i =1;
     image.src ="img/PH0"+i+".jpg";
+    reset();
 
   };
 }
-
 
 
 
@@ -82,9 +96,13 @@ let box3 = document.querySelector(".box3");
 let active_box = document.querySelector(".active");
 
 
-
 box1.onclick = function(){ 
   if(active_box !== this){
+
+    //trying shit:
+
+    reset();
+
     box1.classList.add("active");
     active_box.classList.remove("active");
     active_box = document.querySelector(".active");
@@ -98,6 +116,8 @@ box2.onclick = function(){
     active_box.classList.remove("active");
     active_box = document.querySelector(".active");
     image.src ="img/shuffle-01.jpg";
+    reset();
+    
     change2();
   }
 };
@@ -107,6 +127,8 @@ box3.onclick = function(){
     active_box.classList.remove("active");
     active_box = document.querySelector(".active");
     image.src ="img/PH01.jpg";
+
+    reset();
     change3();
   }
 };

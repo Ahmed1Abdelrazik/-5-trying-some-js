@@ -54,7 +54,6 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
 .container .box{
@@ -63,11 +62,10 @@ body{
     cursor: pointer;
     color: #777;
 
-
-
 }
 
 .container .box.active{
+    
 }
 .container .box.active p{
     transition: 1s;
@@ -83,17 +81,22 @@ body{
     text-transform: uppercase;
 }
 /*END nav bar to chnage gallery selection */
-.img img{
-    border: 2px double rgba(119, 119, 119, 0.336);
-    border-radius: 30px;
+.img img.run-animation{
+    animation: tr .4s linear;
 
-    transition: .5s;
-}
+ }
+
+@keyframes tr{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
 
 .img i{
     cursor: pointer;
     color: #fdc600;
 }
+
 
 @media(max-width:767px){
     .container .box{
