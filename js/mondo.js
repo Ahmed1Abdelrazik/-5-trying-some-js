@@ -82,24 +82,31 @@ let box3 = document.querySelector(".box3");
 let active_box = document.querySelector(".active");
 
 
+
 box1.onclick = function(){ 
-  box1.classList.add("active");
-  active_box.classList.remove("active");
-  active_box = document.querySelector(".active");
-  image.src ="img/SC01.jpg";
-  change1();
+  if(active_box !== this){
+    box1.classList.add("active");
+    active_box.classList.remove("active");
+    active_box = document.querySelector(".active");
+    image.src ="img/SC01.jpg";
+    change1();
+  }
 };
 box2.onclick = function(){ 
-  box2.classList.add("active");
-  active_box.classList.remove("active");
-  active_box = document.querySelector(".active");
-  image.src ="img/shuffle-01.jpg";
-  change2();
+  if(active_box !== this){
+    box2.classList.add("active");
+    active_box.classList.remove("active");
+    active_box = document.querySelector(".active");
+    image.src ="img/shuffle-01.jpg";
+    change2();
+  }
 };
 box3.onclick = function(){ 
-  box3.classList.add("active");
-  active_box.classList.remove("active");
-  active_box = document.querySelector(".active");
-  image.src ="img/PH01.jpg";
-  change3();
+  if(active_box !== this){
+    box3.classList.add("active");
+    active_box.classList.remove("active");
+    active_box = document.querySelector(".active");
+    image.src ="img/PH01.jpg";
+    change3();
+  }
 };
