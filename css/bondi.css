@@ -1,0 +1,52 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* START nav bar to chnage gallery selection */
+.container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.container .box{
+    padding: 20px;
+    margin-right: 20px;
+    display: flex;
+    cursor: pointer;
+    color: #777;
+
+
+
+}
+
+.container .box.active{
+}
+.container .box.active p{
+    transition: 1s;
+
+    background-color:#fdc600 ;
+    color:white;
+}
+.container .box p{
+    padding: 20px;
+    border: 1px solid #fdc60079;
+    border-radius: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+/*END nav bar to chnage gallery selection */
+.img img{
+    border: 2px double rgba(119, 119, 119, 0.336);
+    border-radius: 30px;
+    height: 400px;
+    transition: .5s;
+}
+
+.img i{
+    cursor: pointer;
+    color: #fdc600;
+}
